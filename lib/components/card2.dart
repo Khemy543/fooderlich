@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_apperentice_chapter3/fooderlich_theme.dart';
+import 'package:flutter_apperentice_chapter3/models/explore_recipe.dart';
 import 'author_card.dart';
 
 class Card2 extends StatefulWidget {
-  const Card2({Key? key}) : super(key: key);
+  const Card2({Key? key, required ExploreRecipe recipe}) : super(key: key);
 
   @override
   State<Card2> createState() => _Card2State();

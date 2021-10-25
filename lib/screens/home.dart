@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_apperentice_chapter3/components/card3.dart';
-import '../components/card1.dart';
-import '../components/card2.dart';
+import '../components/component.dart';
+import './explore_screen.dart';
 
 class Home extends StatefulWidget {
   const Home({Key? key}) : super(key: key);
@@ -14,9 +14,11 @@ class _HomeState extends State<Home> {
   int _selectedIndex = 0;
 
   static List<Widget> pages = <Widget>[
-    const Card1(),
-    const Card2(),
-    const Card3()
+    ExploreScreen(),
+    const Center(child: Text('Hello second')),
+    const Center(
+      child: Text('Hello third'),
+    ),
   ];
 
   void _onItemTapped(int index) {
@@ -41,8 +43,7 @@ class _HomeState extends State<Home> {
         currentIndex: _selectedIndex,
         onTap: _onItemTapped,
         items: const <BottomNavigationBarItem>[
-          BottomNavigationBarItem(
-              icon: Icon(Icons.card_giftcard), label: 'Card'),
+          BottomNavigationBarItem(icon: Icon(Icons.explore), label: 'Explore'),
           BottomNavigationBarItem(
               icon: Icon(Icons.card_giftcard), label: 'Card2'),
           BottomNavigationBarItem(
