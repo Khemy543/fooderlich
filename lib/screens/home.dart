@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_apperentice_chapter3/components/card3.dart';
+import 'package:flutter_apperentice_chapter3/screens/recipes_screen.dart';
 import '../components/component.dart';
 import './explore_screen.dart';
 
@@ -15,7 +16,7 @@ class _HomeState extends State<Home> {
 
   static List<Widget> pages = <Widget>[
     ExploreScreen(),
-    const Center(child: Text('Hello second')),
+    RecipesScreen(),
     const Center(
       child: Text('Hello third'),
     ),
@@ -44,8 +45,7 @@ class _HomeState extends State<Home> {
         onTap: _onItemTapped,
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(icon: Icon(Icons.explore), label: 'Explore'),
-          BottomNavigationBarItem(
-              icon: Icon(Icons.card_giftcard), label: 'Card2'),
+          BottomNavigationBarItem(icon: Icon(Icons.book), label: 'Recipes'),
           BottomNavigationBarItem(
               icon: Icon(Icons.card_giftcard), label: 'Card3')
         ],
